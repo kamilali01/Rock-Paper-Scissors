@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandomChoice() {
+    const choices = ["rock", "paper", "scissors"]; // Seçenekler
+    const randomIndex = Math.floor(Math.random() * choices.length); // Rastgele bir indeks
+    return choices[randomIndex]; // İlgili seçeneği döndür
+}
+        function getCumputerChoise(){
+     let i = getRandomChoice();
+     console.log("PC: "+i);
+     return i;
+}
+function getHumanChoise(){
+    let i = prompt("Your choise:");
+    console.log("You: "+i);
+    return i;
+    
+}
+
+function playRound(humanChoie, computerChoise){
+
+    human=humanChoie;
+    computer=computerChoise;
+    
+    if(human==computer){
+        return 0;
+    }
+    else if((human=="rock" && computer=="scissors") || (human=="paper" && computer=="rock") || (human=="scissors" && computer=="paper")){
+        return 1;
+    }
+    else{
+        return -1;
+    }
+}
+function playGame(){
+   
+    let hScore=0;
+    let cScore=0;
+
+    for(let i=0;i<5;i++){
+
+        let human=getHumanChoise();
+        let computer=getCumputerChoise();
+        let round = playRound(human, computer);
+    if(round ==1){
+        hScore++; 
+        console.log("You win!")
+    }
+    else if(round==-1){
+        cScore++;
+        console.log("Yole lose!")
+    }
+    console.log("Score: " + hScore+"-"+cScore);
+
+    }
+    if(hScore>cScore){
+        console.log("YOU ARE WINNER!")
+    }
+    else{
+        console.log("COMPUTER WINS!")
+    }
+    console.log("Final score: " + hScore+"-"+cScore);
+
+    
+}
+playGame();
+    </script>
+</body>
+</html>
