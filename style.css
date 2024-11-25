@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.container{
+    display: flex;
+    height: 100vh
+}
+.left, .right{
+    flex: 1;
+    display: inline-block;
+}
+.left{
+    background-color: #A8DADC  ;
+}
+.right{
+    background-color: #14213D   ;
+}
+.title{
+    position: absolute; /* Konteynerdən təsiri çıxarır */
+    top: 20px; /* Yuxarıdan məsafə */
+    left: 50%; /* Ortalamak üçün */
+    transform: translateX(-50%); /* Sol tərəfdən ortalama */
+    font-size: 2rem; /* Başlığın ölçüsü */
+    color: #FFFFFF; /* Ağ rəng */
+    z-index: 10; /* Başlıq hər şeyin üstündə olsun */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Gözəl bir kölgə effekti */
+}
+.result{
+    position: absolute; /* Konteynerdən təsiri çıxarır */
+    top: 80px; /* Yuxarıdan məsafə */
+    left: 50%; /* Ortalamak üçün */
+    transform: translateX(-50%); /* Sol tərəfdən ortalama */
+    font-size: 2rem; /* Başlığın ölçüsü */
+    color: #FFFFFF; /* Ağ rəng */
+    z-index: 10; /* Başlıq hər şeyin üstündə olsun */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Gözəl bir kölgə effekti */
+}
+.left-container{
+    display: flex;
+    width: 60%;
+    height: 200px;
+    margin-top: 150px;
+    margin-left: 280px;
+    color: #14213D;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 120px;
+}
+.humanImg{
+    border: 10px #14213D solid;
+    border-radius: 80px;
+    width: 200px;
+    height: 200px;
+}
+.you{
+    text-align: right;
+    margin-right: 120px;
+    color: #14213D;
+    font-size: 60px;
+}
+.right-container{
+    display: flex;
+    width: 60%;
+    height: 200px;
+    margin-top: 150px;
+    color: #A8DADC;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 120px;
+}
+.pcImg{
+    border: 10px #A8DADC solid;
+    border-radius: 80px;
+    width: 200px;
+    height: 200px;
+}
+.pc{
+    text-align: left;
+    margin-left: 130px;
+    color: #A8DADC;
+    font-size: 60px;
+}
+.choise-container{
+    position: absolute;
+    display: flex;
+    width: 700px;
+    height: 150px;
+    border-radius: 20px;
+    background-image: url("./img/faded-gray-wooden-textured-flooring-background.jpg") ;
+    border: #010d27 solid 5px;
+    background-size: cover;
+    background-position: center;
+    top: 450px;
+    left: 50%; /* Ortalamak üçün */
+    transform: translateX(-50%); /* Sol tərəfdən ortalama */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.choise-container button{
+    width: 200px;
+    height: 50px;
+    background-image: url("./img/wooden-background.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    /* border-radius: 5px; */
+    color: white;
+    font-size: 40px;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+}
